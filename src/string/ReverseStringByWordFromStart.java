@@ -1,0 +1,31 @@
+package string;
+
+import java.util.Scanner;
+
+public class ReverseStringByWordFromStart {
+	public static void main(String[] args) {
+		Scanner sc =new Scanner(System.in);
+		
+		System.out.println("Please enter the string to show the Reverse");
+		
+		String	myString= sc.nextLine()+" ";
+		
+		char charArrayOfStrMyString[]=myString.toCharArray();
+		
+		System.out.println("Below is the reverse of your String ");
+		int tmpIndex=0;
+		for(int i=0;i<charArrayOfStrMyString.length;i++){
+					
+			if(charArrayOfStrMyString[i]==32){
+				
+				for(int j=i;j>=tmpIndex;j--){
+					System.out.print(charArrayOfStrMyString[j]);
+				}
+				tmpIndex=i;
+			}
+			
+		}
+	
+	}
+	
+}
